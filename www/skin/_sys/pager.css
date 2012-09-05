@@ -1,0 +1,30 @@
+﻿#dcms_pager .pages {
+	border:none;
+	text-transform:uppercase;
+	font-size:12px;
+	margin:10px 0 50px;
+	padding:0;
+	height:20px;
+	clear:both;
+}
+#dcms_pager .pages a {
+	float:left;
+	border:1px solid #ccc;
+	text-decoration:none;
+	margin:0 5px 0 0;
+	padding:5px;
+	float:left;
+}
+#dcms_pager .pages a:hover {
+	border:1px solid #aeaeae;
+}
+#dcms_pager .pages .pgEmpty {
+	border:1px solid #eee;
+	color:#eee;
+}
+#dcms_pager .pages .pgCurrent {
+	border:1px solid #aeaeae;
+	color:#000;
+	font-weight:bold;
+	background-color:#eee;
+}

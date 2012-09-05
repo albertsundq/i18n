@@ -1,0 +1,122 @@
+﻿<table width='100%' border="1" style="border:1px solid #c8dcc4;" cellspacing="0" cellpadding="0">
+
+<tr>
+
+<td>
+
+建表
+
+</td>
+
+<td>
+CREATE TABLE [Dcms_TestBaseInfo] (
+	"TestBaseInfo_Id"		integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"TestBaseInfo_CateId"		integer,
+	"TestBaseInfo_CateName"		nvarchar(255) COLLATE NOCASE,
+	"TestBaseInfo_Title"		nvarchar(255) COLLATE NOCASE,
+	"TestBaseInfo_State"		nvarchar(50) COLLATE NOCASE DEFAULT 1,
+	"TestBaseInfo_Image"		nvarchar(2000) COLLATE NOCASE,
+	"TestBaseInfo_Content"		text(1073741823) COLLATE NOCASE,
+	"TestBaseInfo_Order"		integer,
+	"TestBaseInfo_AddTime"		datetime,
+	"TestBaseInfo_SEOTitle"		nvarchar(255) COLLATE NOCASE,
+	"TestBaseInfo_SEOKeyWord"		nvarchar(255) COLLATE NOCASE,
+	"TestBaseInfo_SEODescription"		nvarchar(255) COLLATE NOCASE,
+	"TestBaseInfo_ExFlag1"		text(1073741823) COLLATE NOCASE
+);
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+查询数据库里所有用户表
+
+</td>
+
+<td>
+
+SELECT name FROM sqlite_master WHERE type='table' ORDER BY name; 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+从一个已存在的 SQLite 数据表中删除字段
+
+</td>
+
+<td>
+
+BEGIN TRANSACTION;
+CREATE TEMPORARY TABLE t1_backup(TestBaseInfo_Id,TestBaseInfo_CateId,TestBaseInfo_CateName,TestBaseInfo_Title,TestBaseInfo_State,TestBaseInfo_Image,TestBaseInfo_Content,TestBaseInfo_Order,TestBaseInfo_AddTime,TestBaseInfo_SEOTitle,TestBaseInfo_SEOKeyWord,TestBaseInfo_SEODescription);
+INSERT INTO t1_backup SELECT TestBaseInfo_Id,TestBaseInfo_CateId,TestBaseInfo_CateName,TestBaseInfo_Title,TestBaseInfo_State,TestBaseInfo_Image,TestBaseInfo_Content,TestBaseInfo_Order,TestBaseInfo_AddTime,TestBaseInfo_SEOTitle,TestBaseInfo_SEOKeyWord,TestBaseInfo_SEODescription FROM Dcms_TestBaseInfo;
+DROP TABLE Dcms_TestBaseInfo;
+CREATE TABLE Dcms_TestBaseInfo(TestBaseInfo_Id,TestBaseInfo_CateId,TestBaseInfo_CateName,TestBaseInfo_Title,TestBaseInfo_State,TestBaseInfo_Image,TestBaseInfo_Content,TestBaseInfo_Order,TestBaseInfo_AddTime,TestBaseInfo_SEOTitle,TestBaseInfo_SEOKeyWord,TestBaseInfo_SEODescription);
+INSERT INTO Dcms_TestBaseInfo SELECT TestBaseInfo_Id,TestBaseInfo_CateId,TestBaseInfo_CateName,TestBaseInfo_Title,TestBaseInfo_State,TestBaseInfo_Image,TestBaseInfo_Content,TestBaseInfo_Order,TestBaseInfo_AddTime,TestBaseInfo_SEOTitle,TestBaseInfo_SEOKeyWord,TestBaseInfo_SEODescription FROM t1_backup;
+DROP TABLE t1_backup;
+COMMIT;
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+更改表名
+
+</td>
+
+<td>
+
+ALTER TABLE 旧表名 RENAME TO 新表名
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+增加表字段
+
+</td>
+
+<td>
+
+ALTER TABLE 表名 ADD COLUMN 字段名 text[字段类型];
+
+例：ALTER TABLE dcms_testbaseinfo1 ADD COLUMN baseinfo_exflag1 text(1073741823) COLLATE NOCASE;
+
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+
+删除表
+
+</td>
+
+<td>
+
+drop table table_name[表名]
+
+</td>
+
+</tr>
+
+
+</table>

@@ -1,0 +1,79 @@
+﻿body 
+{
+	margin: 0px;
+	padding:0px
+    background-color: #F7F3F7;
+	font-size: 9pt;
+	font-family: Tahoma, Verdana, Arial, "新宋体", "宋体";
+}
+.maxbigbox
+{
+	 background-color: #F1F1F1;
+     border: #B8C1CA 1px solid;
+     padding:10px;
+     margin:0 auto;
+}
+.commbox
+{
+    margin: 0px;
+    padding: 15px;
+    background-color: #FFF;
+    border: #C0C0C0 1px solid;    
+}
+.commbox2
+{
+    margin-top: 10px; 
+    padding: 5px; 
+    border: 1px solid #CCC;  
+}
+/* 表格 */
+.tablebox
+{
+    width: 100%;
+    margin-top: 10px;
+    padding: 0px;
+    background: #e7e7e7;
+	border: 1px solid #CCC;
+	word-wrap: break-word;
+}
+.tablehead
+{
+ color: #003380;
+ background: #F2F2F2;
+ font-weight: bold;
+}
+.tabletr
+{
+	background: #fff;
+}
+.tablealtr
+{
+	background: #f8f8f8;
+}
+fieldset
+{
+      padding-top:5px;
+      padding-right:5px;
+      padding-left:5px;
+      padding-bottom:5px;
+    margin:0 auto;
+}
+fieldset legend
+{
+        padding: 0px 5px;
+        font-weight: bold;
+        color: #003380;
+        font-size:14px;
+}
+.btn
+{
+	height: 25px;
+	padding: 0px;
+	background: #fff;
+	background: url("../Images/bg_btn.gif") repeat-x;
+	font-size: 12px;
+	font-weight:bold;
+	line-height: 19px;
+	CURSOR: hand;
+	border: 1px solid #CCCCCC;
+}

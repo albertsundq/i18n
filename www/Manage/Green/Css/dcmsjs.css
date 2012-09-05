@@ -1,0 +1,266 @@
+﻿/*-------jericho tab-------------------*/
+.jericho_tab
+{
+	width: 100%;
+	background: url(../images/tabLineBg.gif) repeat-x;
+}
+/*-------jericho tabpages-------------------*/
+.jericho_tab .tab_pages
+{
+	width: 100%;
+	float: left;
+	clear: both;
+	background: url(../images/tabLineBg.gif) repeat-x;
+}
+.jericho_tab .tab_pages .tabs
+{
+	height:26px;
+	overflow :hidden;
+	display:block;
+	position:relative;
+	float:left;height:29px;line-height:29px;
+}
+
+.jericho_tab .tab_pages div
+{
+	float: left;
+}
+/*-------jericho each tab -------------------*/
+.jericho_tab .tab_pages ul, .jericho_tab .tab_pages li
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.jericho_tab .tab_pages ul
+{
+	position:relative;
+	display:block;float:left;
+	}
+.jericho_tab .tab_pages ul li 
+{
+	float:left;
+}
+.jericho_tab .tab_pages .jericho_tabs
+{
+	width: 150px;
+}
+
+.jericho_tab .tab_pages .tab_unselect div
+{
+	height: 29px;
+	line-height: 29px;
+}
+.jericho_tab .tab_pages .tab_selected div
+{
+	height: 25px;
+	line-height: 25px;
+}
+.jericho_tab .tab_pages .jericho_tabs div.tab_left
+{
+	width: 145px;
+}
+.jericho_tab .tab_pages .jericho_tabs div.tab_right
+{
+	width: 5px;
+}
+.jericho_tab .tab_pages .tab_unselect
+{
+	cursor: pointer;
+}
+
+.jericho_tab .tab_pages .tab_unselect .tab_right
+{
+	background: url(../images/unselectTabBg.gif) no-repeat left 0px;width:2px;
+}
+
+.jericho_tab .tab_pages .tab_unselect_h .tab_right
+{
+	background: url(../images/unselectTabBg.gif) no-repeat left 0px;width:2px;
+}
+.jericho_tab .tab_pages .tab_selected div.tab_left
+{
+	margin-top: 4px;
+	background: url(../images/selectTab.gif) no-repeat left 0px;
+}
+.jericho_tab .tab_pages .tab_selected div.tab_right
+{
+	margin-top: 4px;
+	background: url(../images/selectTab.gif) no-repeat right -25px;
+}
+/*-------jericho tab inner -------------------*/
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_icon
+{
+	width: 25px;
+	text-align: right;
+	background-repeat: no-repeat;
+}
+.jericho_tab .tab_pages .tab_selected .tab_left .tab_icon
+{
+	background-position: right 7px;	
+	}
+.jericho_tab .tab_pages .tab_unselect .tab_left .tab_icon
+{
+	background-position: right center;	
+	}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_text
+{
+	font-family: Calibri;
+	font-size: 12px;
+	text-indent: 5px;
+	padding-top:2px;
+	width: 100px;
+}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_close
+{
+	width: 20px;
+	text-align: center;
+}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_close a
+{
+	width: 11px;
+	height: 11px;
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+}
+.jericho_tab .tab_pages .tab_selected .tab_left .tab_close a
+{
+	background: url(../images/jerichoclose.gif) center -11px no-repeat;
+	margin-top: 10px;
+}
+.jericho_tab .tab_pages .tab_unselect .tab_left .tab_close a
+{
+	background: url(../images/jerichoclose.gif) center 0 no-repeat;
+	margin-top: 6px;
+}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_close a:hover
+{
+	background: url(../images/jerichoclose.gif) center -22px no-repeat;
+}
+/*-------jericho tab slider -------------------*/
+.jericho_tab .tab_pages .jericho_sliders
+{
+	width: 19px;
+	height: 29px;
+	margin:0;
+	cursor: pointer;
+	float:left;
+}
+.jericho_tab .tab_pages .jericho_nosliders
+{
+	width: 19px;
+	height: 29px;
+	margin:0;
+	cursor: pointer;
+	float:left;
+}
+
+.jericho_tab .tab_pages .jericho_sliderleft_no
+{
+	background: url(../images/jerichoslider.gif) 0 -87px no-repeat;
+}
+.jericho_tab .tab_pages .jericho_sliderleft_enable
+{
+	background: url(../images/jerichoslider.gif) 0 0 no-repeat;
+}
+.jericho_tab .tab_pages .jericho_sliderleft_hover
+{
+	background: url(../images/jerichoslider.gif) 0 -29px no-repeat;
+}
+.jericho_tab .tab_pages .jericho_sliderleft_disable
+{
+	background: url(../images/jerichoslider.gif) 0 -58px no-repeat;
+}
+
+.jericho_tab .tab_pages .jericho_sliderright_no
+{
+	background: url(../images/jerichoslider.gif) -21px -87px no-repeat;
+}
+.jericho_tab .tab_pages .jericho_sliderright_enable
+{
+	background: url(../images/jerichoslider.gif) -21px 0 no-repeat;
+}
+.jericho_tab .tab_pages .jericho_sliderright_hover
+{
+	background: url(../images/jerichoslider.gif) -21px -29px no-repeat;
+}
+.jericho_tab .tab_pages .jericho_sliderright_disable
+{
+	background: url(../images/jerichoslider.gif) -21px -58px no-repeat;
+}
+/*-------jericho tab content -------------------*/
+.jericho_tab .tab_content
+{
+	border-bottom: solid 1px #A5B89D;
+	float: left;
+	clear: both;
+	width: 100%;
+	background-color:#f9f9f9;
+}
+.content
+{
+float:left;
+}
+.contentleft
+{
+width:3px;
+background: url(../images/Contentleftbg.gif) repeat-y;
+float:left;
+}
+.contentright
+{
+width:3px;
+background: url(../images/Contentrightbg.gif) repeat-y;
+float:left;
+}
+.contentbottom
+{
+height:3px;
+}
+.contentbleft
+{
+background: url(../images/cbleft.gif) no-repeat;
+float:left;
+width:3px;
+height:3px;
+}
+.contentbbg
+{
+background: url(../images/cbbg.gif) repeat-x;
+float:left;
+width:1000px;
+height:3px;
+}
+.contentbright
+{
+background: url(../images/cbright.gif) no-repeat;
+float:left;
+width:3px;
+height:3px;
+}
+.jericho_tab .tab_content div.content
+{
+	font-family: Calibri;
+	font-size: 12px;
+	padding: 10px;
+	position:relative;
+	overflow:hidden;
+	display:block;
+}
+.jericho_tab .tab_content div.content .righttag
+{
+	position:absolute;
+	top:5px;
+	right:80px;
+	width:230px;
+	height:19px;
+	line-height:19px;
+	background:#F9F9F9 url(../images/loading.gif) no-repeat 8px center;
+	border:1px solid #8aeda1;
+	z-index:9999;
+	}
+.jericho_tab .tab_content div.loading
+{
+	background: url(../images/jerichoload.gif) no-repeat center 30%;
+}

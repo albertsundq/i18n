@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="chkRight.ascx.cs" Inherits="sysaspx_chkRight" %>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Admin_Manage.aspx.cs" Inherits="Manage.BaseManage.Manage_BaseManage_Admin_Manage" %>

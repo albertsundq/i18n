@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="QMenu_Manage.aspx.cs" Inherits="Manage.BaseManage.Manage_BaseManage_QMenu_Manage" %>

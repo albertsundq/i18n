@@ -1,0 +1,45 @@
+﻿body 
+{
+	width:100%;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif, 宋体;
+	margin:0px;
+	padding:0px;
+}
+.list
+{
+	width:100%;
+	border:1px solid #D9E4F3;
+	padding:0px;
+}
+.list tr td
+{
+	border:1px solid #D9E4F3;
+}
+.list tr th
+{
+	background-color:#E8F0FB;
+	border:1px solid #D9E4F3;
+	height:30px;
+}
+.trrightpad0
+{
+	background-color:#E8F0FB;
+}
+.list1
+{
+	width:100%;
+	border:1px solid #D9E4F3;
+	padding:0px;
+	}
+.list1 tr th
+{
+	background-color:#E8F0FB;
+	height:30px;
+}
+A {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: none
+}

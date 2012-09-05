@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JModal Demo</title>
+<link rel="Stylesheet" type="text/css" href="jmodal.css" />
+<script type="text/javascript" src="../Js/jquery.js"></script>
+<script type="text/javascript" src="jmodal.js"></script>
+<style type="text/css">
+        body,html
+        {
+            font-family:Calibri;
+            font-size:12px;
+            height:1000px;
+            line-height:18px;
+        }
+    </style>
+<script type="text/javascript">
+	function ModelInfo()
+	{
+		$.fn.jmodal({
+			title: '信息提示',
+			content: '可移动的对话框!',
+			buttonText: { ok: '确定', cancel: '取消' },
+			okEvent: function(obj, args) {
+				args.complete();
+			}
+		});
+	}
+        $().ready(function() {
+            $('a.fixed').click(function() {
+                $.fn.jmodal({
+                    title: '信息提示',
+                    content: 'I am always fixed in the middle of screen(just scroll)!',
+                    buttonText: { ok: '确定', cancel: 'No' },
+                    fixed: false,
+                    okEvent: function(obj, args) {
+                        if(args.oktext="");
+                        //args.complete();
+                    },
+					handler: '.jmodal-title',                
+                	zIndex:200,
+                	opacity:.9
+                });
+            });
+
+            $('a.absolute').click(function() {
+                $.fn.jmodal({
+                    title: '信息提示',
+                    content: '可移动的对话框!',
+                    buttonText: { ok: '确定', cancel: '取消' },
+                    okEvent: function(obj, args) {
+                        args.complete();
+                    }
+                });
+            });
+
+            $('.ajax').click(function() {
+                $.fn.jmodal({
+                    title: 'ajax调用',
+                    content: function(e) {
+                        e.html('loading...');
+                        e.load('template/msn.htm');
+                    },
+                    buttonText: { ok: 'Yes,It is.', cancel: 'No' },
+                    okEvent: function(obj, args) {
+                        args.complete();
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<ul>
+  <li><a href="javascript:void(0)" onclick="ModelInfo();" class="asdfasdf" >fixed dialog</a></li>
+  <li><a href="javascript:void(0)" class="fixed" >fixed dialog</a></li>
+  <li><a href="javascript:void(0)" class="absolute" >absolute dialog</a></li>
+  <li><a href="javascript:void(0)" class="ajax">ajax dialog</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <node name="站点地图" language="CN">
+    <node name="关于我们" type="基础信息|Introduction" ModelKey="guanyuwomen" magstate="0" showtype="0" browse="3" auditing="3" managePage="0" Guid="7844fd5328484bfad12359389c0103b1&#xD;&#xA;">
+      <node name="公司介绍" type="基础信息|Introduction" ModelKey="gongsijieshao" magstate="0" showtype="0" browse="2" auditing="3" managePage="1" Guid="b61a6b03f6c3434f9b87b4ebb9e34e8a&#xD;&#xA;" />
+      <node name="企业文化" type="基础信息|Introduction" ModelKey="qiyewenhuaa" magstate="0" showtype="0" browse="2" auditing="3" managePage="1" Guid="8539bf63f0f07efe4320132c8345e594&#xD;&#xA;" />
+      <node name="组织结构" type="基础信息|Introduction" ModelKey="zuzhijiegou" magstate="0" showtype="0" browse="3" auditing="2" managePage="1" Guid="599c98b18270a0ea45ba194102b4a087&#xD;&#xA;" />
+      <node name="总裁致辞" type="基础信息|Introduction" ModelKey="zongcaizhici" magstate="0" showtype="0" browse="3" auditing="3" managePage="1" Guid="5b855da0a1139285ee6a2ee4585d5fe0&#xD;&#xA;" />
+      <node name="联系我们" type="基础信息|Introduction" ModelKey="lianxiwomen" magstate="0" showtype="0" browse="2" auditing="3" managePage="1" Guid="e687aab32bd3ce301b92f8a3504616a5&#xD;&#xA;" />
+    </node>
+    <node name="产品中心" type="产品|Product" ModelKey="chanpinzhongxin" magstate="0" showtype="1" browse="2" auditing="2" managePage="1" Guid="5b44d35516f848d80ea60b716da1ae9e&#xD;&#xA;">
+      <node name="产品系列1" type="产品|Product" ModelKey="chanpinxiliea" magstate="0" showtype="1" browse="4" auditing="3" managePage="1" Guid="550da246af3c02d8a52de6298f85924e&#xD;&#xA;" />
+      <node name="产品系列2" type="产品|Product" ModelKey="chanpinxilie" magstate="0" showtype="1" browse="2" auditing="2" managePage="1" Guid="550da246af3c02d8a52de6298f85924e&#xD;&#xA;" />
+      <node name="新产品" type="产品|Product" ModelKey="xinchanpin" magstate="0" showtype="1" browse="4" auditing="2" managePage="1" Guid="0e2119674841a4e358f4173358785a3f&#xD;&#xA;" />
+    </node>
+    <node name="新闻中心" type="新闻|News" ModelKey="xinwenzhongxin" magstate="0" showtype="1" browse="3" auditing="3" managePage="0" Guid="f21b3f1967fc288f0d73c4273e3dcb99&#xD;&#xA;">
+      <node name="公司新闻" type="新闻|News" ModelKey="gongsixinwen" magstate="0" showtype="1" browse="2" auditing="3" managePage="1" Guid="fe64bccd1b82271e0ae7151c8b9bfe06&#xD;&#xA;" />
+      <node name="行业新闻" type="新闻|News" ModelKey="xingyexinwen" magstate="0" showtype="1" browse="2" auditing="3" managePage="1" Guid="b68dacf264ab9d53cecc89ff7cd5b6ff&#xD;&#xA;" />
+      <node name="最新公告" type="新闻|News" ModelKey="zuixingonggao" magstate="0" showtype="1" browse="2" auditing="3" managePage="1" Guid="d07534a734f2aba9d4479dbf76dbd45f&#xD;&#xA;" />
+    </node>
+    <node name="人才招聘" type="招聘|Position" ModelKey="rencaizhaopin" magstate="0" showtype="0" browse="2" auditing="2" managePage="1" Guid="752d270db584b3afb3663c3c83448ba1">
+      <node name="人才政策" type="招聘|Position" ModelKey="rencaizhengce" magstate="0" showtype="0" browse="2" auditing="2" managePage="1" Guid="771e7b9aefba7962a5a04e8bf1f73280" />
+      <node name="人才信息" type="招聘|Position" ModelKey="rencaixinxi" magstate="0" showtype="0" browse="2" auditing="2" managePage="1" Guid="925f8e694f732064156af1752af93e8e" />
+    </node>
+    <node name="留言系统" type="留言簿|GuestBook" ModelKey="liuyanxitong" magstate="0" showtype="1" browse="2" auditing="2" managePage="1" Guid="f42844b535852875397a1a5dbf3366bd">
+      <node name="留言信息" type="基础信息|Introduction" ModelKey="liuyanxinxi" magstate="0" showtype="0" browse="2" auditing="2" managePage="1" Guid="11359784f90bba8063a5305964b6ca39" />
+      <node name="留言提交" type="留言簿|GuestBook" ModelKey="liuyantijiao" magstate="0" showtype="1" browse="2" auditing="2" managePage="1" Guid="3508f9a103ce6e5197917a818b201824" />
+    </node>
+  </node>
+</root>

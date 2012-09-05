@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root allcate=",新闻|News,产品|Product,基础信息|Introduction,留言簿|GuestBook,订单管理系统|GuestBook#留言簿,会员管理|User,友情|Link,">
+  <node modelName="新闻" type="新闻|News" model="News" order="0" />
+  <node modelName="产品" type="产品|Product" model="Product" order="0" />
+  <node modelName="基础信息" type="基础信息|Introduction" model="Introduction" order="0" />
+  <node modelName="留言簿" type="留言簿|GuestBook" model="GuestBook" order="0" />
+  <node modelName="订单管理系统" type="订单管理系统|GuestBook#留言簿" model="GuestBook" order="1" />
+  <node modelName="会员管理" type="会员管理|User" model="User" order="0" />
+  <node modelName="友情" type="友情|Link" model="Link" order="0" />
+  <node modelName="招聘" type="招聘|Position" model="Position" order="0" />
+</root>

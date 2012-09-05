@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mt{ padding-top:10px; text-align:center;}
+.allSorts {
+	background-IMAGE: url(img2011/Head/Search_bg.png); MARGIN: 0px auto; WIDTH: 980px; background-REPEAT: no-repeat; ZOOM: 1; height: 38px
+}
+.allSorts_left {
+	 Z-INDEX: 11; float: left; background-IMAGE: url(img2011/Head/search_left.jpg);  padding-TOP: 0px; background-REPEAT: no-repeat; position: relative; height: 38px
+}
+.search_form {
+	padding-RIGHT: 0px; padding-left: 5px; float: left; padding-BOTTOM: 7px; MARGIN: 0px; WIDTH: 755px; padding-TOP: 4px; height: 27px
+}
+.search_form .form {
+	padding-RIGHT: 0px; background-position: -6px -169px; padding-left: 0px; Z-INDEX: 1000000; float: left; background-IMAGE: url(img2011/Head/ico.jpg); padding-BOTTOM: 0px; MARGIN: 0px; WIDTH: 326px; padding-TOP: 0px; position: relative; height: 27px
+}
+.search_form .right_card {
+	padding-RIGHT: 10px; background-position: 180px -1px; padding-left: 30px; FONT-WEIGHT: normal; FONT-SIZE: 12px; float: right; background-IMAGE: url(img2011/Head/ico.jpg); padding-BOTTOM: 0px; MARGIN: 0px; WIDTH: 139px; COLOR: #383838; padding-TOP: 7px; height: 21px
+}
+.search_form .hotWords {
+	padding-RIGHT: 3px; padding-left: 5px; FONT-WEIGHT: normal; FONT-SIZE: 12px; float: left; padding-BOTTOM: 0px; MARGIN: 0px; WIDTH: 235px; COLOR: #fff; padding-TOP: 5px; height: 22px
+}
+.hotWords A:link {
+	padding-RIGHT: 5px; padding-left: 5px; MARGIN: 0px
+}
+.hotWords A:visited {
+	padding-RIGHT: 5px; padding-left: 5px; MARGIN: 0px
+}
+.hotWords A:active {
+	padding-RIGHT: 5px; padding-left: 5px; MARGIN: 0px
+}
+.hotWords A:hover {
+	padding-RIGHT: 5px; padding-left: 5px; MARGIN: 0px
+}
+#key {
+	BORDER-TOP-WIDTH: 0px; padding-RIGHT: 5px; padding-left: 24px; BORDER-left-WIDTH: 0px; FONT-SIZE: 14px; background: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; padding-BOTTOM: 6px; WIDTH: 221px; COLOR: #999; line-height: 15px; padding-TOP: 8px; height: 15px; BORDER-RIGHT-WIDTH: 0px
+}
+#btn-search {
+	BORDER-TOP-WIDTH: 0px; padding-RIGHT: 0px; padding-left: 0px; FONT-WEIGHT: bold; BORDER-left-WIDTH: 0px; FONT-SIZE: 14px; background: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; padding-BOTTOM: 0px; MARGIN: 0px; WIDTH: 75px; CURSOR: pointer; COLOR: #c03; padding-TOP: 4px; height: 29px; BORDER-RIGHT-WIDTH: 0px
+}
+.form INPUT {
+	FONT-SIZE: 12px; float: left
+}
+.form SELECT {
+	FONT-SIZE: 12px; float: left
+}
+.form TEXTAREA {
+	FONT-SIZE: 12px; float: left
+}
+.form BUTTON {
+	FONT-SIZE: 12px; float: left
+}
+.form .label {
+	FONT-SIZE: 12px; float: left
+}
+.t {
+	padding-RIGHT: 20px; padding-left: 20px; padding-BOTTOM: 8px; MARGIN: 0px; WIDTH: 177px; CURSOR: pointer; padding-TOP: 10px; height: 20px
+}
+.allSorts_left .t STRONG {
+	FONT-SIZE: 14px; float: left; COLOR: #630
+}
+.allSorts_left .d {
+	BORDER-RIGHT: #cc3300 1px solid;  background:#fef8ef url(../images/licon.gif) no-repeat 8px 10px; overflow: visible; BORDER-left: #cc3300 1px solid; WIDTH:194px;  position: absolute; TOP: 38px; moz-border-radius: 0 0 5px 5px; webkit-border-radius: 0 0 5px 5px;  padding-bottom:30px; left:2px;
+}
+.allSorts_left .d .extra {
+	padding-RIGHT: 8px; BORDER-TOP: #fde6d2 1px solid; padding-left: 18px; background: #fdf1de; padding-BOTTOM: 7px; padding-TOP: 7px
+}
+.allSorts_left .d .extra A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #fb3a00
+}
+.allSorts_left .item {
+	BORDER-TOP: #fde6d2 1px solid; WIDTH:194px; height: 35px
+}
+.allSorts_left .fore {
+	BORDER-TOP-STYLE: none
+}
+.allSorts_left SPAN {
+	padding-RIGHT: 0px; DISPLAY: block; padding-left: 0px; Z-INDEX: 1; padding-BOTTOM: 0px; MARGIN: 0px; WIDTH: 194px; padding-TOP: 0px; position: relative; height: 35px
+}
+.allSorts_left H3 {
+	BORDER-RIGHT: 1px solid #FFF9EF; background-position: -13px -9px; BORDER-TOP: #fef8ef 1px solid; padding-left:32px; FONT-WEIGHT: normal; background-IMAGE: url(img2011/Head/ico.jpg);  WIDTH: 131px; padding-TOP: 0px; BORDER-BOTTOM: #fef8ef 1px solid; background-REPEAT: no-repeat; height: 33px
+}
+.allSorts_left H3 a{
+	DISPLAY: block; COLOR: #333; line-height: 33px; height: 33px
+}
+
+.allSorts_left H3 A:hover {
+	COLOR: #1b578a
+}
+
+.allSorts_left S {DISPLAY: block; left: 172px; WIDTH: 13px; background-REPEAT: no-repeat; position: absolute; TOP: 13px; height: 13px; background:url(../images/arrow.gif) no-repeat;}
+.h3left:link {
+	DISPLAY: block; FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #333; TEXT-DECORATION: none
+}
+.h3left:visited {
+	DISPLAY: block; FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #333; TEXT-DECORATION: none
+}
+.h3left:active {
+	DISPLAY: block; FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #333; TEXT-DECORATION: none
+}
+.h3left:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #c00; TEXT-DECORATION: underline
+}
+.allSorts_left .fr {
+	background: #fff; MARGIN-BOTTOM: -2000px; padding-BOTTOM: 2010px; WIDTH: 176px
+}
+.allSorts_left .fr DL {
+	padding-BOTTOM: 0px
+}
+.allSorts_left .fr A {
+	COLOR: #666
+}
+.allSorts_left .item .i-mc {
+	BORDER-RIGHT: #c30 1px solid; BORDER-TOP: #c30 1px solid; DISPLAY: none; background: #fff9ef; left: 163px; overflow: hidden; BORDER-left: #c30 1px solid; WIDTH: 480px; BORDER-BOTTOM: #c30 1px solid; position: absolute; TOP: 0px
+}
+.allSorts_left .item DT {
+	padding-RIGHT: 6px; padding-left: 0px; FONT-WEIGHT: bold; padding-BOTTOM: 0px; COLOR: #c00; padding-TOP: 3px
+}
+.allSorts_left .item DD {
+	padding-RIGHT: 0px; padding-left: 0px; padding-BOTTOM: 0px; overflow: hidden; padding-TOP: 3px; ZOOM: 1
+}
+.allSorts_left .subitem {
+	padding-RIGHT: 4px; padding-left: 8px; min-height:292px; float: left; padding-BOTTOM: 0px; WIDTH: 464px; padding-TOP: 0px; min-height:292px; height:auto !important; height:292px; overflow:visible;
+}
+.allSorts_left .subitem DL {
+	padding-RIGHT: 0px; BORDER-TOP: #ffefd7 1px solid; padding-left: 0px; padding-BOTTOM: 6px; overflow: hidden; padding-TOP: 6px; ZOOM: 1
+}
+.allSorts_left .subitem .fore {
+	BORDER-TOP-STYLE: none
+}
+.allSorts_left .subitem DT A {
+	FONT-WEIGHT: bold; COLOR: #c00
+}
+.allSorts_left .subitem DT {
+	float: left; WIDTH: 80px; line-height: 22px; TEXT-ALIGN: right
+}
+.allSorts_left .subitem DD {
+	float: left; WIDTH: 374px
+}
+.allSorts_left .subitem EM {
+	padding-RIGHT: 8px; padding-left: 8px; float: left; padding-BOTTOM: 0px; MARGIN: 4px 0px; BORDER-left: #ccc 1px solid; line-height: 14px; padding-TOP: 0px; height: 14px; font-style:normal;
+}
+.allSorts_left .subitem EM a{ color:#333;}
+.allSorts_left .hover SPAN {
+	Z-INDEX: 13; WIDTH: 164px;
+}
+.allSorts_left .hover H3 {
+	 background-position: -13px -9px; BORDER-TOP: #c30 1px solid; FONT-WEIGHT: bold; background-IMAGE: url(img2011/Head/ico.jpg); overflow: hidden; BORDER-BOTTOM: #c30 1px solid; background-REPEAT: no-repeat
+}
+.allSorts_left .hover S {
+	DISPLAY: none
+}
+.allSorts_left .hover .i-mc {
+	DISPLAY: block; Z-INDEX: 12
+}
+.allSorts_left .close {
+	Z-INDEX: 14; background: url(img2011/Head/ico.jpg) -219px -61px; left: 480px; WIDTH: 19px; CURSOR: pointer; position: absolute; TOP: 6px; height: 19px
+}
+.allSorts_left .mc{ display:none;}
+.allSorts_lefthover .mc{display:block;}

@@ -1,0 +1,126 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="memberinfo.aspx.cs" Inherits="_memberinfo_aspx" EnableViewState="false" %>
+<%@ Register Assembly="Dcms.Controls" Namespace="Dcms.Controls" TagPrefix="Dcms" %>
+<%@ Register Src="Ascx/_header.ascx" TagName="_header" TagPrefix="Dcms" %>
+<%@ Register Src="Ascx/_member_left.ascx" TagName="_member_left" TagPrefix="Dcms" %>
+<%@ Register Src="Ascx/_footer.ascx" TagName="_footer" TagPrefix="Dcms" %>
+<!DOCTYPE html PUBLIC "-//W3C//dtD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/dtD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TITLE>大连富甲蓝莓有限公司</TITLE>
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<link href="styles/default.css" rel="stylesheet" type="text/css" />
+<link href="styles/sort.css" rel="stylesheet" type="text/css" />
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<SCRIPT src="js/jquery.js" type=text/javascript></SCRIPT>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.STYLE5 {
+	color: #FFFFFF
+}
+.STYLE6 {
+	color: #FF0000
+}
+-->
+</style>
+<script src="/sysaspx/common.js" type="text/javascript"></script>
+</head>
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+<Dcms:_header ID="_header_0" runat="server" />
+<table width="1003" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><table width="1003" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="1001"><table width="1003" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="219" valign="top"><table width="193" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="191" height="41" background="images/about_06.GIF"><table width="100" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td><span class="STYLE1">会员中心 </span></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="230" valign="top" background="images/about_03.gif"><table width="143" align="center" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td><Dcms:_member_left ID="_member_left_1" runat="server" />                            </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td align="center"><img src="images/about_18.gif" width="182" height="84" /></td>
+                    </tr>
+                  </table></td>
+                <td width="782"  valign="top"><table width="717" align="right" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><span class="aboutright">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="693" height="238">
+                          <param name="movie" value="flash/banner.swf" />
+                          <param name="quality" value="high" />
+                          <param name="wmode" value="transparent" />
+                          <embed src="flash/banner.swf" width="693" height="238" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent"></embed>
+                        </object>
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td height="26"><table width="700" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td height="51" valign="bottom" background="images/about_15.GIF"><table width="700" height="40" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td width="52" height="35">&nbsp;</td>
+                                  <td width="644"><div class="STYLE5">您当前位置: 会员中心 &gt;会员注册 </div></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td height="27"><script language="JavaScript" type="text/javascript">
+function message_OnSubmit() {
+var User_Name=document.getElementById("User_Name").value;
+if(User_Name.length<1){alert("请填写用户名!");return false;}
+
+var Password1=document.getElementById("Password1").value;
+if(Password1.length<6){alert("密码应为6-12位字符!");return false;}
+
+var Password2=document.getElementById("Password2").value;
+if(Password2!=Password1){alert("两次密码不一致!");return false;}
+
+var User_RealName=document.getElementById("User_RealName").value;
+if(User_RealName.length<1){alert("请填写姓名!");return false;}
+
+var User_Email=document.getElementById("User_Email").value;
+if(User_Email.length<1){alert("请填写电子邮箱!");return false;}
+
+var User_Tel=document.getElementById("User_Tel").value;
+if(User_Tel.length<1){alert("请填写移动电话!");return false;}
+
+var User_Address=document.getElementById("User_Address").value;
+if(User_Address.length<1){alert("请填写联系地址!");return false;}
+}
+</script>
+                        <Dcms:Drepeater ID="Repeater0" runat="server" SqlType="select" SelectDir="this" SwitchDb="" PrimaryKey="User_Id" TotalLayer="1" TableName="Dcms_User" FieldName="User_Name,User_PassWord,User_Email,User_Tel,User_IM,User_Address" FieldValue="" Children="0" PageSize="1" IsPage="false" Where="User_Id={session.UserId,0}" OrderBy="">
+                        	<ItemTemplate0>                        <form name="messageForm" method="post" action="/sysaspx/UserUpdate.aspx" onsubmit="javascript:return message_OnSubmit(this);" id="messageForm">                          <input type="hidden" name="successMessage" id="successMessage" value="修改成功！" />                          <input type="hidden" name="successUrl" id="successUrl" value="/memberinfo.aspx" />                          <input type="hidden" name="errorMessage" id="errorMessage" value="对不起，提交失败，请重试！" />                          <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">                            <tbody>                              <tr>                                <td height="25">&nbsp;</td>                                <td colspan="4">&nbsp;</td>                              </tr>                              <tr>                                <td width="94" height="30">用户名：</td>                                <td colspan="4"><input id="User_Name" disabled="disabled" value="{Dcms_User.User_Name}"  name="User_Name" readonly="readonly" />                                </td>                              </tr>                              <tr>                                <td height="30">密码：</td>                                <td colspan="4"><input id="Password1" type="password" size="22" value="{Dcms_User.User_PassWord}" name="Password1" />                                  <span class="TipRed">*</span> </td>                              </tr>                              <tr>                                <td height="30">确认密码：</td>                                <td colspan="4"><input id="Password2" type="password" size="22" value="{Dcms_User.User_PassWord}" name="Password2" />                                  <span class="TipRed">*</span> </td>                              </tr>                              <tr>                                <td height="30">姓名：</td>                                <td colspan="4"><input id="User_RealName" value="{Dcms_User.User_Name}" name="User_RealName" />                                  <span class="TipRed">*</span> </td>                              </tr>                               <tr>                                <td height="30">电子邮箱：</td>                                <td colspan="4"><input id="User_Email" value="{Dcms_User.User_Email}" name="User_Email" />                                  <span class="TipRed">*</span> </td>                              </tr>                              <tr>                                  <td>移动电话：</td>                                  <td colspan="4"><input type="text"  class="inputb" id="User_Tel" name="User_Tel" value="{Dcms_User.User_Tel}" />                                    <span class="TipRed">*</span></td>                                </tr>                                <tr>                                  <td>固定电话：</td>                                  <td colspan="4"><input type="text"  class="inputb" id="User_IM" name="User_IM" value="{Dcms_User.User_IM}" /></td>                                </tr>                                <tr>                                  <td>联系地址：</td>                                  <td colspan="4"><input type="text"  class="inputb" id="User_Address" name="User_Address" value="{Dcms_User.User_Address}" />                                    <span class="TipRed">*</span></td>                                </tr>                                                           <tr>                                <td height="50" align="right"></td>                                <td width="53"><input type="submit" name="button" id="button" class="button" value="提交" /></td>                                <td width="17">&nbsp;</td>                                <td width="391"><input type="submit" name="button2" id="button2"class="button" value="重置" /></td>                                <td width="17"></td>                              </tr>                            </tbody>                          </table>                          </ItemTemplate0>
+	<NoItmeTemplate0><script type="text/javascript">alert('超时，请重新登录！');window.location.href='login.aspx';</script></NoItmeTemplate0>
+</Dcms:Drepeater>
+
+                        </form></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<Dcms:_footer ID="_footer_2" runat="server" />   
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JModal Demo</title>
+    <link rel="Stylesheet" type="text/css" href="jmodal.css" />
+    <script type="text/javascript" src="../Js/jquery.js"></script>
+    <script type="text/javascript" src="jmodal.js"></script>
+    <style type="text/css">
+    body,html
+    {
+        font-family:Calibri;
+        font-size:12px;
+        height:1000px;
+        line-height:18px;
+        }
+    </style>
+    <script type="text/javascript">
+        $().ready(function() {
+            $('a.fixed').click(function() {
+                $.fn.jmodal({
+                    data: { innerText: $(this).text() },
+                    title: 'Information',
+                    content: 'I am always fixed in the middle of screen(just scroll)!',
+                    buttonText: { ok: 'Yes,It is.', cancel: 'No' },
+                    fixed: true,
+                    okEvent: function(data, args) {
+                        alert(data.innerText);
+                    }
+                });
+            });
+
+            $('a.absolute').click(function() {
+                $.fn.jmodal({
+                    title: 'Information',
+                    content: 'I am a absolute dialog!',
+                    buttonText: { ok: 'Yes,It is.', cancel: 'No' },
+                    okEvent: function(data, args) {
+                    
+                    }
+                });
+            });
+
+            $('a.ajax').click(function() {
+                $.fn.jmodal({
+                    title: 'Information',
+                    content: function(body) {
+                        body.html('loading...');
+                        body.load('template/msn.htm');
+                    },
+                    buttonText: { ok: 'Yes,It is.', cancel: 'No' },
+                    okEvent: function(data, args) {
+                    	
+                    }
+                });
+            });
+            
+            var txtInput;
+            $('a.withtext').click(function() {
+                $.fn.jmodal({
+                    title: 'input',
+                    content: function(body) {
+                        body.html('<input type="text" id="txtInput" />');
+                        txtInput = $('#txtInput');
+                    },
+                    buttonText: { ok: 'Yes,It is.', cancel: 'No' },
+                    okEvent: function(data, args) {
+                    	if($.trim(txtInput.val())==''){
+                    		args.isCancelling=true;
+                    		alert('required.');
+                    	}
+                    	else{
+                    		args.isCancelling=false;
+                    		alert(txtInput.val());
+                    	}
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li><a href="javascript:void(0)" class="fixed" >fixed dialog</a></li>
+    <li><a href="javascript:void(0)" class="absolute" >absolute dialog</a></li>
+    <li><a href="javascript:void(0)" class="ajax">ajax dialog</a></li>
+    <li><a href="javascript:void(0)" class="withtext">with textbox</a></li>
+</ul>
+<select><option>abc</select>
+
+</body>
+</html>

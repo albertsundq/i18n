@@ -1,0 +1,88 @@
+﻿
+td {
+	padding-right: 0px; padding-left: 0px; font-size: 12px; padding-bottom: 0px; margin: 0px; color: #000; padding-top: 0px; font-family: verdana,arial,helvetica,sans-serif
+}
+img {
+	border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px
+}
+table {
+	border-collapse: collapse; border-spacing: 0
+}
+.alertmsgtitlediv {
+	width:100%; height: 28px;
+}
+.lftcorner {
+	background-position: -256px -128px; width: 27px
+}
+.midtxt {
+	background-position: 0px -704px; font-weight: bold;color:#7b5917;
+}
+.rigcorner {
+ BACKGROUND-POSITION: -319px -128px; WIDTH: 27px
+}
+.rigcorner a {
+	background-position: -287px -160px; display: block; width: 27px; height: 28px
+}
+.rigcorner a:hover {
+	background-position: -319px -160px
+}
+
+.alertmsgcontentdiv{
+	width: 100%; background-color:#fff;
+}
+.gsw_con_wpin {
+border:1px solid #A99E82;
+border-top:none; border-bottom:none;
+text-align:left;
+height:100%;
+overflow:hidden;
+}
+.sw_ico_wp 
+{
+	padding-right: 0px; padding-left: 0px; padding-bottom: 20px; width:40px; padding-top: 20px; text-align:left;
+}
+.sw_ico_wp .sw_ico {
+	background-position: -384px -128px; display: block; margin-left: 20px; width: 32px; height: 32px;
+}
+
+.alertmsgcontentinof {
+	PADDING-RIGHT: 26px; PADDING-LEFT: 26px; FONT-SIZE: 14px; PADDING-BOTTOM: 16px; PADDING-TOP: 16px;
+}
+
+.alertmsgfootdiv{background-color:#FBFAF6;width:100%;}
+.alertmsgfootbox 
+{
+border:1px solid #A99E82;border-top:none;
+HEIGHT: 45px;
+}
+.alertmsgfootbox .btn {
+	margin-top: 10px; float: right; margin-right: 16px
+}
+.alertmsgfootboxpage 
+{
+border:1px solid #A99E82;border-top:none;
+}
+.f1img{background-image:url('../images/yellowmsgImg/f1.gif');background-repeat:no-repeat;}
+.f2img{background-image:url('../images/yellowmsgImg/f2.gif');background-repeat:repeat-x;}
+.hrsub {
+	border-top: #D8D8D8 1px solid;
+}
+.btnnml{background-position:0 -96px;}
+.btnhv,.btn:hover{background-position:0 -128px;}
+.btn
+{
+	height:26px;
+font-family:"宋体"; 
+color:#333;
+cursor:pointer!important;cursor:hand;
+padding-top:4px;
+padding-top:2px; 
+padding-left:5px; 
+padding-right:5px; 
+border:1px solid #a4946f;
+background-color:#fefcf8;
+font-size:12px;
+}
+.btnhv,.btn:hover{background-position:0 -128px;}
+.btnhv:hover{border:1px solid #a2904d; background-color:#fff;}
+.btn,.btnhv{background-image:url('../images/yellowmsgImg/f2.gif');background-repeat:repeat-x;}

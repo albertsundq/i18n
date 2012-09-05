@@ -1,0 +1,203 @@
+<table width='100%' border="1" style="border:1px solid #c8dcc4;" cellspacing="0" cellpadding="0">
+
+<tr>
+
+<td>
+
+建表
+
+</td>
+
+<td>
+CREATE TABLE [dbo].[Dcms_TestUser] (
+
+	[User_TestId] [int] IDENTITY (1, 1) NOT NULL ,
+
+	[User_TestName] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,
+
+	[User_TestRealName] [nvarchar] (50) COLLATE Chinese_PRC_CI_AS NULL ,
+
+	[User_TestLastTime] [datetime] NULL ,
+
+	[User_TestCredits] [int] NULL ,
+
+	[User_TesPMSound] [int] NULL ,
+
+	[User_TestInVisible] [int] NULL ,
+
+	[User_TestNewPM] [int] NULL ,
+
+	[User_TestNewPMCcount] [int] NULL ,
+
+	[User_TestExFlag10] [nvarchar] (500) COLLATE Chinese_PRC_CI_AS NULL 
+
+) ON [PRIMARY]
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+设置表主键
+
+</td>
+
+<td>
+
+ALTER TABLE [dbo].[Dcms_TestUser] ADD 
+
+	CONSTRAINT [PK_Dcms_TestUser] PRIMARY KEY  CLUSTERED 
+
+	(
+
+		[User_TestId]
+
+	)  ON [PRIMARY] 
+
+
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+修改表字段默认值（如果已经存在默认值要先删除默认值约束)
+
+</td>
+
+<td>
+
+ALTER   TABLE   dcms_testuser   add   DEFAULT   ( '0 ')   for   User_TestCredits   WITH   VALUES 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+查询表字段默认约束
+
+</td>
+
+<td>
+
+select   c.name   from   sysconstraints   a 
+inner   join   syscolumns   b   on   a.colid=b.colid 
+inner   join   sysobjects   c   on   a.constid=c.id 
+where   a.id=object_id( '表名 ')   
+and   b.name= '字段名 '
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+删除默认值约束
+
+</td>
+
+<td>
+
+Alter   table   dcms_testuser   drop   constraint     DF__dcms_test__User___6FB49575[约束名称]
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+增加字段
+
+</td>
+
+<td>
+
+alter table docdsp[h
+T]  add dspcode[W[k
+Ty] char(200)
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+ 删除字段
+
+</td>
+
+<td>
+
+ALTER TABLE table_NAME[表名] DROP COLUMN column_NAME[字段名称]
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+修改字段类型
+
+</td>
+
+<td>
+
+ALTER TABLE table_name[表名]    ALTER COLUMN  column_name[字段名称] new_data_type[字段类型]
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+删除表
+
+</td>
+
+<td>
+
+drop table table_name[表名]
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+查询系统表字段类型有哪些
+
+</td>
+
+<td>
+
+select * from systypes
+
+</td>
+
+</tr>
+
+</table>
+
+
+

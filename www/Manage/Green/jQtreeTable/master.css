@@ -1,0 +1,37 @@
+﻿/* TABLE
+ * ========================================================================= */
+#dnd-example {
+  border: 0px;
+  border-collapse: collapse;
+  line-height: 1;
+  margin: 0px;
+  width: 100%;
+}
+/* Body
+ * ------------------------------------------------------------------------- */
+#dnd-example tbody tr td {
+  cursor: default;
+  padding: .3em 1.5em;
+}
+
+#dnd-example tbody tr.even {
+  background: #f3f3f3;
+}
+
+table tbody tr.odd {
+  background: #fff;
+}
+
+#dnd-example span {
+  background-position: center left;
+  background-repeat: no-repeat;
+  padding: .2em 0 .2em 1.5em;
+}
+
+#dnd-example span.file {
+  background-image: url(page_white_text.png);
+}
+
+#dnd-example span.folder {
+  background-image: url(folder.png);
+}

@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root allcate=",新闻|News,产品|Product,基础信息|Introduction,留言簿|GuestBook,订单管理系统|GuestBook#留言簿,会员管理|User,友情|Link,">
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="3" Label="父级栏目" Label1="父级栏目" MustField="0" Name="News_CateName" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">父级栏目：</td>
+                        <td><input type="text" size="20" style="width:200px" value="父级栏目" readonly="true" runat="server" id="News_CateName" name="News_CateName" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="新闻标题" Label1="新闻标题" MustField="1" Name="News_Title" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">新闻标题：</td>
+                        <td><input type="text" size="20" style="width:300px" class="{required:true}" id="News_Title" name="News_Title" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="新闻作者" Label1="新闻作者" MustField="0" Name="News_Author" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">新闻作者：</td>
+                        <td><input type="text" size="20" style="width:300px" value="互联网" id="News_Author" name="News_Author" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="1" HelpInfo="" IsCheck="digits" IsHide="0" Label="阅读次数" Label1="阅读次数" MustField="0" Name="News_Count" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">阅读次数：</td>
+                        <td><input type="text" size="20" style="width:180px" class="{digits:true}" value="1" id="News_Count" name="News_Count" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="新闻图片" Label1="新闻图片" MustField="0" Name="News_Image" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="2" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">新闻图片：</td>
+                        <td><input type="text" size="20" style="width:260px" id="News_Image" name="News_Image" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('News_Image')" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="新闻视频" Label1="新闻视频" MustField="0" Name="News_Video" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="2" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">新闻视频：</td>
+                        <td><input type="text" size="20" style="width:260px" id="News_Video" name="News_Video" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('News_Video')" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="Now" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="发布时间" Label1="发布时间" MustField="0" Name="News_AddTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="5" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">发布时间：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_AddTime" name="News_AddTime" class="{required:true,dateISO:true}" value="<%=System.DateTime.Now.ToString("yyyy-MM-dd") %>" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('News_AddTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="显示状态" Label1="显示状态" MustField="0" Name="News_State" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="3" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">显示状态：</td>
+                        <td style="font-weight:normal;"><select id="News_State" name="News_State" style="width:100px">
+							<option value="1">显示</option>
+							<option value="0">关闭</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="首页推荐" Label1="首页推荐" MustField="0" Name="News_IsIndex" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="3" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">首页推荐：</td>
+                        <td style="font-weight:normal;"><select id="News_IsIndex" name="News_IsIndex" style="width:160px">
+							<option value="0">不首页推荐</option>
+							<option value="1">首页推荐</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="链接新闻" Label1="链接新闻" MustField="0" Name="News_IsUrl" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="3" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">链接新闻：</td>
+                        <td style="font-weight:normal;"><select id="News_IsUrl" name="News_IsUrl" style="width:100px">
+							<option value="0">不是</option>
+							<option value="1">是</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="链接地址" Label1="链接地址" MustField="0" Name="News_Url" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">链接地址：</td>
+                        <td><input type="text" size="20" style="width:300px" value="http://" id="News_Url" name="News_Url" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="打开方式" Label1="打开方式" MustField="0" Name="News_Target" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="3" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">打开方式：</td>
+                        <td style="font-weight:normal;"><select id="News_Target" name="News_Target" style="width:200px">
+							<option value="_self">当前窗口打开</option>
+							<option value="_blank">弹出新页面</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="新闻内容" Label1="新闻内容" MustField="0" Name="News_Content" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="4" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">新闻内容：</td>
+                        <td style="padding-top:5px;"><textarea id="News_Content" name="News_Content" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息1" Label1="扩展信息1" MustField="0" Name="News_ExFlag1" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息1：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag1" name="News_ExFlag1" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息2" Label1="扩展信息2" MustField="0" Name="News_ExFlag2" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息2：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag2" name="News_ExFlag2" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息3" Label1="扩展信息3" MustField="0" Name="News_ExFlag3" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息3：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag3" name="News_ExFlag3" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息4" Label1="扩展信息4" MustField="0" Name="News_ExFlag4" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息4：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag4" name="News_ExFlag4" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息5" Label1="扩展信息5" MustField="0" Name="News_ExFlag5" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息5：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag5" name="News_ExFlag5" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息6" Label1="扩展信息6" MustField="0" Name="News_ExFlag6" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息6：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag6" name="News_ExFlag6" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息7" Label1="扩展信息7" MustField="0" Name="News_ExFlag7" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息7：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag7" name="News_ExFlag7" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息8" Label1="扩展信息8" MustField="0" Name="News_ExFlag8" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息8：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag8" name="News_ExFlag8" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息9" Label1="扩展信息9" MustField="0" Name="News_ExFlag9" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息9：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag9" name="News_ExFlag9" /></td>
+                      </tr>]]></node>
+  <node typeName="新闻" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息10" Label1="扩展信息10" MustField="0" Name="News_ExFlag10" Order="0" Reg="" RegMsg="" RequiredField="" Type="News" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息10：</td>
+                        <td><input type="text" size="20" style="width:200px" id="News_ExFlag10" name="News_ExFlag10" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="3" Label="父级栏目" Label1="父级栏目" MustField="0" Name="Products_CateName" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">父级栏目：</td>
+                        <td><input type="text" size="20" style="width:200px" value="父级栏目" readonly="true" runat="server" id="Products_CateName" name="Products_CateName" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="产品名称" Label1="产品名称" MustField="1" Name="Products_Title" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">产品名称：</td>
+                        <td><input type="text" size="20" style="width:300px" class="{required:true}" id="Products_Title" name="Products_Title" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="产品型号" Label1="产品型号" MustField="0" Name="Products_CodeName" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">产品型号：</td>
+                        <td><input type="text" size="20" style="width:300px" id="Products_CodeName" name="Products_CodeName" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="1" HelpInfo="" IsCheck="digits" IsHide="0" Label="阅读次数" Label1="阅读次数" MustField="0" Name="Products_Count" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">阅读次数：</td>
+                        <td><input type="text" size="20" style="width:128px" class="{digits:true}" value="1" id="Products_Count" name="Products_Count" /></td>
+					  </tr>]]></node>
+  <node typeName="产品" DefaultValue="1" HelpInfo="" IsCheck="digits" IsHide="0" Label="产品排序" Label1="产品排序" MustField="0" Name="Products_Order" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">产品排序：</td>
+                        <td><input type="text" size="20" style="width:128px" class="{digits:true}" value="1" id="Products_Order" name="Products_Order" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="产品小图" Label1="产品小图" MustField="0" Name="Products_MinImage" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="2" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">产品小图：</td>
+                        <td><input type="text" size="20" style="width:260px" id="Products_MinImage" name="Products_MinImage" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('Products_MinImage')" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="产品大图" Label1="产品大图" MustField="0" Name="Products_BigImage" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="2" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">产品大图：</td>
+                        <td><input type="text" size="20" style="width:260px" id="Products_BigImage" name="Products_BigImage" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('Products_BigImage')" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="产品文档" Label1="产品文档" MustField="0" Name="Products_FileIntro" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="2" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">产品文档：</td>
+                        <td><input type="text" size="20" style="width:260px" id="Products_FileIntro" name="Products_FileIntro" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('Products_FileIntro')" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="Now" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="发布时间" Label1="发布时间" MustField="0" Name="Products_AddTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="5" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">发布时间：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_AddTime" name="Products_AddTime" class="{required:true,dateISO:true}" value="<%=System.DateTime.Now.ToString("yyyy-MM-dd") %>" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('Products_AddTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="显示状态" Label1="显示状态" MustField="0" Name="Products_State" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="3" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">显示状态：</td>
+                        <td style="font-weight:normal;"><select id="Products_State" name="Products_State" style="width:100px">
+							<option value="1">显示</option>
+							<option value="0">关闭</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="是否新品" Label1="是否新品" MustField="0" Name="Products_IsNew" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="3" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">是否新品：</td>
+                        <td style="font-weight:normal;"><select id="Products_IsNew" name="Products_IsNew" style="width:128px">
+							<option value="0">不是</option>
+							<option value="1">是</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="是否热销" Label1="是否热销" MustField="0" Name="Products_IsHot" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="3" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">是否热销：</td>
+                        <td style="font-weight:normal;"><select id="Products_IsHot" name="Products_IsHot" style="width:128px">
+							<option value="0">不是</option>
+							<option value="1">是</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="产品价格" Label1="产品价格" MustField="0" Name="Products_Prices" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">产品价格：</td>
+                        <td><input type="text" size="20" style="width:200px" value="" id="Products_Prices" name="Products_Prices" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="详细介绍" Label1="详细介绍" MustField="0" Name="Products_Introduction" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="4" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">详细介绍：</td>
+                        <td style="padding-top:5px;"><textarea id="Products_Introduction" name="Products_Introduction" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="其它参数" Label1="其它参数" MustField="0" Name="Products_OtherInfo" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="4" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">其它参数：</td>
+                        <td style="padding-top:5px;"><textarea id="Products_OtherInfo" name="Products_OtherInfo" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息1" Label1="扩展信息1" MustField="0" Name="Products_ExFlag1" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息1：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag1" name="Products_ExFlag1" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息2" Label1="扩展信息2" MustField="0" Name="Products_ExFlag2" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息2：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag2" name="Products_ExFlag2" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息3" Label1="扩展信息3" MustField="0" Name="Products_ExFlag3" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息3：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag3" name="Products_ExFlag3" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息4" Label1="扩展信息4" MustField="0" Name="Products_ExFlag4" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息4：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag4" name="Products_ExFlag4" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息5" Label1="扩展信息5" MustField="0" Name="Products_ExFlag5" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息5：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag5" name="Products_ExFlag5" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息6" Label1="扩展信息6" MustField="0" Name="Products_ExFlag6" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息6：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag6" name="Products_ExFlag6" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息7" Label1="扩展信息7" MustField="0" Name="Products_ExFlag7" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息7：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag7" name="Products_ExFlag7" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息8" Label1="扩展信息8" MustField="0" Name="Products_ExFlag8" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息8：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag8" name="Products_ExFlag8" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息9" Label1="扩展信息9" MustField="0" Name="Products_ExFlag9" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息9：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag9" name="Products_ExFlag9" /></td>
+                      </tr>]]></node>
+  <node typeName="产品" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息10" Label1="扩展信息10" MustField="0" Name="Products_ExFlag10" Order="0" Reg="" RegMsg="" RequiredField="" Type="Product" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">扩展信息10：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Products_ExFlag10" name="Products_ExFlag10" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="3" Label="父级栏目" Label1="父级栏目" MustField="0" Name="BaseInfo_CateName" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">父级栏目：</td>
+                        <td><input type="text" size="20" style="width:200px" value="父级栏目" readonly="true" runat="server" id="BaseInfo_CateName" name="BaseInfo_CateName" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="信息标题" Label1="信息标题" MustField="1" Name="BaseInfo_Title" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">信息标题：</td>
+                        <td><input type="text" size="20" style="width:300px" class="{required:true}" id="BaseInfo_Title" name="BaseInfo_Title" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="信息图片" Label1="信息图片" MustField="0" Name="BaseInfo_Image" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="2" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">信息图片：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_Image" name="BaseInfo_Image" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('BaseInfo_Image')" />    </td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="Now" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="发布时间" Label1="发布时间" MustField="0" Name="BaseInfo_AddTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="5" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">发布时间：</td>
+                        <td><input type="text" size="20" style="width:200px" class="{required:true,dateISO:true}" value="<%=System.DateTime.Now.ToString("yyyy-MM-dd") %>" id="BaseInfo_AddTime" name="BaseInfo_AddTime" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('BaseInfo_AddTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="1" HelpInfo="" IsCheck="digits" IsHide="0" Label="信息排序" Label1="信息排序" MustField="0" Name="BaseInfo_Order" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+					  	<td width="120" height="30" align="center">信息排序：</td>
+                        <td><input type="text" size="20" style="width:100px" class="{digits:true}" value="1" id="BaseInfo_Order" name="BaseInfo_Order" /></td>
+					  </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="显示状态" Label1="显示状态" MustField="0" Name="BaseInfo_State" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="3" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">显示状态：</td>
+                        <td style="font-weight:normal;"><select id="BaseInfo_State" name="BaseInfo_State" style="width:100px">
+							<option value="1">显示</option>
+							<option value="0">关闭</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="信息正文" Label1="信息正文" MustField="0" Name="BaseInfo_Content" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="4" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">信息正文：</td>
+                        <td style="padding-top:5px;"><textarea id="BaseInfo_Content" name="BaseInfo_Content" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息1" Label1="扩展信息1" MustField="0" Name="BaseInfo_ExFlag1" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息1：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag1" name="BaseInfo_ExFlag1" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息2" Label1="扩展信息2" MustField="0" Name="BaseInfo_ExFlag2" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息2：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag2" name="BaseInfo_ExFlag2" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息3" Label1="扩展信息3" MustField="0" Name="BaseInfo_ExFlag3" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息3：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag3" name="BaseInfo_ExFlag3" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息4" Label1="扩展信息4" MustField="0" Name="BaseInfo_ExFlag4" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息4：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag4" name="BaseInfo_ExFlag4" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息5" Label1="扩展信息5" MustField="0" Name="BaseInfo_ExFlag5" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息5：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag5" name="BaseInfo_ExFlag5" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息6" Label1="扩展信息6" MustField="0" Name="BaseInfo_ExFlag6" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息6：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag6" name="BaseInfo_ExFlag6" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息7" Label1="扩展信息7" MustField="0" Name="BaseInfo_ExFlag7" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息7：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag7" name="BaseInfo_ExFlag7" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息8" Label1="扩展信息8" MustField="0" Name="BaseInfo_ExFlag8" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息8：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag8" name="BaseInfo_ExFlag8" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息9" Label1="扩展信息9" MustField="0" Name="BaseInfo_ExFlag9" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息9：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag9" name="BaseInfo_ExFlag9" /></td>
+                      </tr>]]></node>
+  <node typeName="基础信息" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息10" Label1="扩展信息10" MustField="0" Name="BaseInfo_ExFlag10" Order="0" Reg="" RegMsg="" RequiredField="" Type="Introduction" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">扩展信息10：</td>
+                        <td><input type="text" size="20" style="width:200px" id="BaseInfo_ExFlag10" name="BaseInfo_ExFlag10" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="3" Label="父级栏目" Label1="父级栏目" MustField="0" Name="GuestBook_CateName" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">父级栏目：</td>
+                        <td><input type="text" size="20" style="width:200px" value="父级栏目" readonly="true" runat="server" id="GuestBook_CateName" name="GuestBook_CateName" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="留言标题" Label1="留言标题" MustField="1" Name="GuestBook_Title" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">留言标题：</td>
+                        <td><input type="text" size="20" style="width:300px" class="{required:true}" id="GuestBook_Title" name="GuestBook_Title" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户名称" Label1="用户名称" MustField="0" Name="GuestBook_UserName" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">用户名称：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserName" name="GuestBook_UserName" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户电话" Label1="用户电话" MustField="0" Name="GuestBook_UserTel" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">用户电话：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_UserTel" name="GuestBook_UserTel" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户邮箱" Label1="用户邮箱" MustField="0" Name="GuestBook_UserEmail" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">用户邮箱：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserEmail" name="GuestBook_UserEmail" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="QQ/MSN" Label1="QQ/MSN" MustField="0" Name="GuestBook_UserIM" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">QQ/MSN：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserIM" name="GuestBook_UserIM" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户IP" Label1="用户IP" MustField="0" Name="GuestBook_UserIp" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">用户IP：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_UserIp" name="GuestBook_UserIp" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户头像" Label1="用户头像" MustField="0" Name="GuestBook_UserPic" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">用户头像：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserPic" name="GuestBook_UserPic" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="发布时间" Label1="发布时间" MustField="0" Name="GuestBook_AddTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="5" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">发布时间：</td>
+                        <td><input type="text" size="20" style="width:200px" class="{required:true,dateISO:true}" id="GuestBook_AddTime" name="GuestBook_AddTime" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('GuestBook_AddTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="显示状态" Label1="显示状态" MustField="0" Name="GuestBook_State" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="3" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">显示状态：</td>
+                        <td style="font-weight:normal;"><select id="GuestBook_State" name="GuestBook_State" style="width:100px">
+							<option value="1">显示</option>
+							<option value="0">关闭</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="留言内容" Label1="留言内容" MustField="0" Name="GuestBook_Content" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="4" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">留言内容：</td>
+                        <td style="padding-top:5px;"><textarea id="GuestBook_Content" name="GuestBook_Content" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="回复内容" Label1="回复内容" MustField="0" Name="GuestBook_ReplyContent" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="4" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">回复内容：</td>
+                        <td style="padding-top:5px;"><textarea id="GuestBook_ReplyContent" name="GuestBook_ReplyContent" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="回复时间" Label1="回复时间" MustField="0" Name="GuestBook_ReplyTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="5" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">回复时间：</td>
+                        <td><input type="text" size="20" class="{required:true,dateISO:true}" style="width:200px" id="GuestBook_ReplyTime" name="GuestBook_ReplyTime" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('GuestBook_ReplyTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息1" Label1="扩展信息1" MustField="0" Name="GuestBook_ExFlag1" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息1：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag1" name="GuestBook_ExFlag1" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息2" Label1="扩展信息2" MustField="0" Name="GuestBook_ExFlag2" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息2：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag2" name="GuestBook_ExFlag2" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息3" Label1="扩展信息3" MustField="0" Name="GuestBook_ExFlag3" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息3：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag3" name="GuestBook_ExFlag3" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息4" Label1="扩展信息4" MustField="0" Name="GuestBook_ExFlag4" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息4：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag4" name="GuestBook_ExFlag4" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息5" Label1="扩展信息5" MustField="0" Name="GuestBook_ExFlag5" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息5：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag5" name="GuestBook_ExFlag5" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息6" Label1="扩展信息6" MustField="0" Name="GuestBook_ExFlag6" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息6：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag6" name="GuestBook_ExFlag6" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息7" Label1="扩展信息7" MustField="0" Name="GuestBook_ExFlag7" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息7：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag7" name="GuestBook_ExFlag7" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息8" Label1="扩展信息8" MustField="0" Name="GuestBook_ExFlag8" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息8：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag8" name="GuestBook_ExFlag8" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息9" Label1="扩展信息9" MustField="0" Name="GuestBook_ExFlag9" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息9：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag9" name="GuestBook_ExFlag9" /></td>
+                      </tr>]]></node>
+  <node typeName="留言簿" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息10" Label1="扩展信息10" MustField="0" Name="GuestBook_ExFlag10" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息10：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag10" name="GuestBook_ExFlag10" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="3" Label="父级栏目" Label1="父级栏目" MustField="0" Name="GuestBook_CateName" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">父级栏目：</td>
+                        <td><input type="text" size="20" style="width:200px" value="父级栏目" readonly="true" runat="server" id="GuestBook_CateName" name="GuestBook_CateName" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="留言标题" Label1="留言标题" MustField="1" Name="GuestBook_Title" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">留言标题：</td>
+                        <td><input type="text" size="20" style="width:300px" class="{required:true}" id="GuestBook_Title" name="GuestBook_Title" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户名称" Label1="用户名称" MustField="0" Name="GuestBook_UserName" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">用户名称：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserName" name="GuestBook_UserName" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户电话" Label1="用户电话" MustField="0" Name="GuestBook_UserTel" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">用户电话：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_UserTel" name="GuestBook_UserTel" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户邮箱" Label1="用户邮箱" MustField="0" Name="GuestBook_UserEmail" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">用户邮箱：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserEmail" name="GuestBook_UserEmail" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="QQ/MSN" Label1="QQ/MSN" MustField="0" Name="GuestBook_UserIM" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">QQ/MSN：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserIM" name="GuestBook_UserIM" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户IP" Label1="用户IP" MustField="0" Name="GuestBook_UserIp" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">用户IP：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_UserIp" name="GuestBook_UserIp" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="用户头像" Label1="用户头像" MustField="0" Name="GuestBook_UserPic" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">用户头像：</td>
+                        <td><input type="text" size="20" style="width:300px" id="GuestBook_UserPic" name="GuestBook_UserPic" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="发布时间" Label1="发布时间" MustField="0" Name="GuestBook_AddTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="5" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">发布时间：</td>
+                        <td><input type="text" size="20" style="width:200px" class="{required:true,dateISO:true}" id="GuestBook_AddTime" name="GuestBook_AddTime" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('GuestBook_AddTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="显示状态" Label1="显示状态" MustField="0" Name="GuestBook_State" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="3" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">显示状态：</td>
+                        <td style="font-weight:normal;"><select id="GuestBook_State" name="GuestBook_State" style="width:100px">
+							<option value="1">显示</option>
+							<option value="0">关闭</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="留言内容" Label1="留言内容" MustField="0" Name="GuestBook_Content" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="4" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">留言内容：</td>
+                        <td style="padding-top:5px;"><textarea id="GuestBook_Content" name="GuestBook_Content" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="回复内容" Label1="回复内容" MustField="0" Name="GuestBook_ReplyContent" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="4" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">回复内容：</td>
+                        <td style="padding-top:5px;"><textarea id="GuestBook_ReplyContent" name="GuestBook_ReplyContent" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="回复时间" Label1="回复时间" MustField="0" Name="GuestBook_ReplyTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="5" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">回复时间：</td>
+                        <td><input type="text" size="20" class="{required:true,dateISO:true}" style="width:200px" id="GuestBook_ReplyTime" name="GuestBook_ReplyTime" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('GuestBook_ReplyTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息1" Label1="扩展信息1" MustField="0" Name="GuestBook_ExFlag1" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息1：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag1" name="GuestBook_ExFlag1" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息2" Label1="扩展信息2" MustField="0" Name="GuestBook_ExFlag2" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息2：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag2" name="GuestBook_ExFlag2" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息3" Label1="扩展信息3" MustField="0" Name="GuestBook_ExFlag3" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息3：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag3" name="GuestBook_ExFlag3" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息4" Label1="扩展信息4" MustField="0" Name="GuestBook_ExFlag4" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息4：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag4" name="GuestBook_ExFlag4" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息5" Label1="扩展信息5" MustField="0" Name="GuestBook_ExFlag5" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息5：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag5" name="GuestBook_ExFlag5" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息6" Label1="扩展信息6" MustField="0" Name="GuestBook_ExFlag6" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息6：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag6" name="GuestBook_ExFlag6" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息7" Label1="扩展信息7" MustField="0" Name="GuestBook_ExFlag7" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息7：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag7" name="GuestBook_ExFlag7" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息8" Label1="扩展信息8" MustField="0" Name="GuestBook_ExFlag8" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息8：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag8" name="GuestBook_ExFlag8" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息9" Label1="扩展信息9" MustField="0" Name="GuestBook_ExFlag9" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息9：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag9" name="GuestBook_ExFlag9" /></td>
+                      </tr>]]></node>
+  <node typeName="订单管理系统" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息10" Label1="扩展信息10" MustField="0" Name="GuestBook_ExFlag10" Order="0" Reg="" RegMsg="" RequiredField="" Type="GuestBook" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息10：</td>
+                        <td><input type="text" size="20" style="width:200px" id="GuestBook_ExFlag10" name="GuestBook_ExFlag10" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="3" Label="父级栏目" Label1="父级栏目" MustField="0" Name="Link_CateName" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">父级栏目：</td>
+                        <td><input type="text" size="20" style="width:200px" value="父级栏目" readonly="true" runat="server" id="Link_CateName" name="Link_CateName" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="链接名称" Label1="链接名称" MustField="1" Name="Link_Title" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[  <tr>
+                        <td width="120" height="30" align="center">链接名称：</td>
+                        <td><input type="text" size="20" style="width:300px" class="{required:true}" id="Link_Title" name="Link_Title" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="链接地址" Label1="链接地址" MustField="0" Name="Link_Url" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td width="120" height="30" align="center">链接地址：</td>
+                        <td><input type="text" size="20" style="width:300px" value="http://" id="Link_Url" name="Link_Url" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="链接图片" Label1="链接图片" MustField="0" Name="Link_Pic" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="2" rbl=""><![CDATA[ <tr>
+                        <td align="center" height="30">链接图片：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_Pic" name="Link_Pic" /> <input type="button" value="浏览" onclick="parent.ShowImageDialog('Link_Pic')" />    </td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="dateISO" IsHide="0" Label="创建时间" Label1="创建时间" MustField="0" Name="Link_AddTime" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="5" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">创建时间：</td>
+                        <td><input type="text" size="20" style="width:200px" class="{required:true,dateISO:true}" value="<%=System.DateTime.Now.ToString("yyyy-MM-dd") %>" id="Link_AddTime" name="Link_AddTime" />&nbsp;
+                                    <img style="CURSOR: hand" onclick="setday(document.getElementById('Link_AddTime'))" src="../Green/Images/calendar.gif" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="1" HelpInfo="" IsCheck="digits" IsHide="0" Label="链接排序" Label1="链接排序" MustField="0" Name="Link_Order" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+					  	<td width="120" height="30" align="center">链接排序：</td>
+                        <td><input type="text" size="20" style="width:100px" class="{digits:true}" value="1"  id="Link_Order" name="Link_Order" /></td>
+					  </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="显示状态" Label1="显示状态" MustField="0" Name="Link_State" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="3" rbl=""><![CDATA[  <tr>
+                        <td align="center" height="30">显示状态：</td>
+                        <td style="font-weight:normal;"><select id="Link_State" name="Link_State" style="width:100px">
+							<option value="1">显示</option>
+							<option value="0">关闭</option>
+						</select></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="0" Label="链接说明" Label1="链接说明" MustField="0" Name="Link_Intro" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="4" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">链接说明：</td>
+                        <td style="padding-top:5px;"><textarea id="Link_Intro" name="Link_Intro" class="xheditor" style="width:90%" rows="10"></textarea></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息1" Label1="扩展信息1" MustField="0" Name="Link_ExFlag1" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[ <tr>
+                        <td width="120" height="30" align="center">扩展信息1：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag1" name="Link_ExFlag1" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息2" Label1="扩展信息2" MustField="0" Name="Link_ExFlag2" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息2：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag2" name="Link_ExFlag2" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息3" Label1="扩展信息3" MustField="0" Name="Link_ExFlag3" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息3：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag3" name="Link_ExFlag3" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息4" Label1="扩展信息4" MustField="0" Name="Link_ExFlag4" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息4：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag4" name="Link_ExFlag4" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息5" Label1="扩展信息5" MustField="0" Name="Link_ExFlag5" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息5：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag5" name="Link_ExFlag5" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息6" Label1="扩展信息6" MustField="0" Name="Link_ExFlag6" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息6：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag6" name="Link_ExFlag6" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息7" Label1="扩展信息7" MustField="0" Name="Link_ExFlag7" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息7：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag7" name="Link_ExFlag7" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息8" Label1="扩展信息8" MustField="0" Name="Link_ExFlag8" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息8：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag8" name="Link_ExFlag8" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息9" Label1="扩展信息9" MustField="0" Name="Link_ExFlag9" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息9：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag9" name="Link_ExFlag9" /></td>
+                      </tr>]]></node>
+  <node typeName="友情" DefaultValue="" HelpInfo="" IsCheck="" IsHide="1" Label="扩展信息10" Label1="扩展信息10" MustField="0" Name="Link_ExFlag10" Order="0" Reg="" RegMsg="" RequiredField="" Type="Link" WebId="3851" FileconControl="1" rbl=""><![CDATA[<tr>
+                        <td align="center" height="30">扩展信息10：</td>
+                        <td><input type="text" size="20" style="width:200px" id="Link_ExFlag10" name="Link_ExFlag10" /></td>
+                      </tr>]]></node>
+</root>

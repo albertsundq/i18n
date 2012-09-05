@@ -1,0 +1,75 @@
+#position {
+	LEFT: 50%; MARGIN: 0px 0px 0px -320px; POSITION: absolute; TOP: 88px
+}
+#position #inposition {
+	WIDTH: 722px; HEIGHT: 409px
+}
+#position #inposition .login-left {
+	BACKGROUND: url(../images/login-content-bg.gif) no-repeat; FLOAT: left; WIDTH: 361px; HEIGHT: 409px
+}
+#position #inposition .login-left .login-left-logo {
+	MARGIN-TOP: 90px
+}
+#position #inposition .login-left .login-left-content {
+	COLOR: #7a7b7b; TEXT-ALIGN: left
+}
+#position #inposition .login-left .login-left-content UL {
+	LIST-STYLE-TYPE: none
+}
+#position #inposition .login-left .login-left-content UL LI {
+	PADDING-LEFT: 15px; BACKGROUND: url(../images/icon-li.gif) no-repeat left center; MARGIN: 4px 0px 4px 10px
+}
+#position #inposition .login-left .login-left-sever {
+	FONT-WEIGHT: bold; MARGIN: 4px 0px 4px 50px; TEXT-ALIGN: left
+}
+#position #inposition .login-right {
+	FLOAT: right; WIDTH: 361px; HEIGHT: 409px; TEXT-ALIGN: left
+}
+#position #inposition .login-right .login-right-title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 131px 0px 20px 14px; TEXT-ALIGN: left
+}
+#position #inposition .login-right .login-right-input {
+	MARGIN: 0px 0px 0px 14px; COLOR: #516587; TEXT-ALIGN: left
+}
+#position #inposition .login-right .login-right-input TD {
+	PADDING-BOTTOM: 10px; COLOR: #516587
+}
+#position #inposition .login-right .login-right-input .input {
+	BORDER-RIGHT: #95a1b6 1px solid; BORDER-TOP: #95a1b6 1px solid; BORDER-LEFT: #95a1b6 1px solid; WIDTH: 150px; BORDER-BOTTOM: #95a1b6 1px solid
+}
+#position #inposition .login-right .login-right-login {
+	MARGIN: 0px 0px 10px 100px; COLOR: #516587; TEXT-ALIGN: left
+}
+#position #inposition .login-right .login-right-login .button {
+	BACKGROUND: url(../images/buttom_bg1.gif) no-repeat; WIDTH: 72px; CURSOR: pointer; COLOR: #395366; BORDER-TOP-STYLE: none; LINE-HEIGHT: 17px; PADDING-TOP: 3px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 20px; BORDER-BOTTOM-STYLE: none
+}
+#position #inposition .login-right .login-right-erro {
+	BORDER-RIGHT: #ff6600 1px solid; PADDING-RIGHT: 25px; BORDER-TOP: #ff6600 1px solid; PADDING-LEFT: 25px; BACKGROUND: url(../images/erro.gif) #fff2e9 no-repeat left top; PADDING-BOTTOM: 3px; MARGIN: 20px 0px 10px 14px; BORDER-LEFT: #ff6600 1px solid; WIDTH: 250px; COLOR: #9c614f; PADDING-TOP: 3px; BORDER-BOTTOM: #ff6600 1px solid; TEXT-ALIGN: left
+}
+#header {
+	BACKGROUND: url(../images/login-top-bg.gif) repeat-x; HEIGHT: 41px
+}
+#header .lan {
+	FLOAT: right; MARGIN: 8px 11px 0px 0px
+}
+#content {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; BACKGROUND: url(../images/login-bg.gif) repeat-x; PADDING-BOTTOM: 58px; PADDING-TOP: 395px; TEXT-ALIGN: right
+}
+#buttom {
+	BACKGROUND: url(../images/login-buttom-bg.gif) repeat-x; HEIGHT: 20px
+}
+#buttom .copy {
+	FLOAT: right
+}
+#buttom .copy2 {
+	PADDING-LEFT: 30%; FONT-SIZE: 10px; FLOAT: left; COLOR: #93a1ab; LINE-HEIGHT: 20px
+}
+.hint-dialog-content {
+	BACKGROUND: url(../images/input-bg.gif) no-repeat; HEIGHT: 41px
+}
+.hint-dialog-content-padder {
+	PADDING-LEFT: 5px
+}
+.hint-dialog-content-text {
+	MARGIN-TOP: 0px! important; COLOR: #265972; LINE-HEIGHT: 28px
+}

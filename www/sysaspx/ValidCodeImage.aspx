@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ValidCodeImage.aspx.cs" Inherits="sysaspx_ValidCodeImage" %>

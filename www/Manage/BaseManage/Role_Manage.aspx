@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Role_Manage.aspx.cs" Inherits="Manage.BaseManage.Manage_BaseManage_Role_Manage" %>

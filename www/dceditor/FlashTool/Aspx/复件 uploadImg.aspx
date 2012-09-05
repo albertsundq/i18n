@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="uploadImg.aspx.cs" Inherits="FlashTool_Aspx_uploadImg" %>
